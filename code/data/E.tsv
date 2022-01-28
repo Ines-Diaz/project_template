@@ -1,0 +1,5 @@
+node1	node2	node1_string_id	node2_string_id	neighborhood_on_chromosome	gene_fusion	phylogenetic_cooccurrence	homology	coexpression	experimentally_determined_interaction	database_annotated	automated_textmining	combined_score
+BRD2	BRD4	9606.ENSP00000378704	9606.ENSP00000263377	0	0	0	0.924	0.062	0.479	0	0.960	0.528
+BRD4	BRD2	9606.ENSP00000263377	9606.ENSP00000378704	0	0	0	0.924	0.062	0.479	0	0.960	0.528
+BRD4	ZC3H18	9606.ENSP00000263377	9606.ENSP00000416951	0	0	0	0	0.142	0.682	0	0	0.715
+ZC3H18	BRD4	9606.ENSP00000416951	9606.ENSP00000263377	0	0	0	0	0.142	0.682	0	0	0.715

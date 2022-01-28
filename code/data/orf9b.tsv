@@ -1,0 +1,5 @@
+node1	node2	node1_string_id	node2_string_id	neighborhood_on_chromosome	gene_fusion	phylogenetic_cooccurrence	homology	coexpression	experimentally_determined_interaction	database_annotated	automated_textmining	combined_score
+MARK1	MARK2	9606.ENSP00000483424	9606.ENSP00000385751	0	0	0	0.968	0	0.488	0	0.773	0.500
+MARK2	MARK1	9606.ENSP00000385751	9606.ENSP00000483424	0	0	0	0.968	0	0.488	0	0.773	0.500
+MARK2	MARK3	9606.ENSP00000385751	9606.ENSP00000411397	0	0	0	0.964	0.113	0.488	0	0.722	0.538
+MARK3	MARK2	9606.ENSP00000411397	9606.ENSP00000385751	0	0	0	0.964	0.113	0.488	0	0.722	0.538

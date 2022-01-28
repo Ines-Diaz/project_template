@@ -1,0 +1,5 @@
+node1	node2	node1_string_id	node2_string_id	neighborhood_on_chromosome	gene_fusion	phylogenetic_cooccurrence	homology	coexpression	experimentally_determined_interaction	database_annotated	automated_textmining	combined_score
+EIF4E2	GIGYF2	9606.ENSP00000258416	9606.ENSP00000387170	0	0	0	0	0.088	0.975	0	0.972	0.999
+FKBP15	KIAA1033	9606.ENSP00000238256	9606.ENSP00000484713	0	0	0	0	0	0.270	0	0.707	0.777
+GIGYF2	EIF4E2	9606.ENSP00000387170	9606.ENSP00000258416	0	0	0	0	0.088	0.975	0	0.972	0.999
+KIAA1033	FKBP15	9606.ENSP00000484713	9606.ENSP00000238256	0	0	0	0	0	0.270	0	0.707	0.777

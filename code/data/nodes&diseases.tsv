@@ -42,7 +42,7 @@ PRIM1
 PRIM2	
 EIF4E2	
 FKBP15	
-GIGYF2	parkinson disease type 11
+GIGYF2	parkinson's disease
 KIAA1033	
 BCAR1	cancer
 C6orf48	
@@ -81,48 +81,48 @@ MARC1
 MOGS	type IIb congenital disorder of glycosylation
 RAB10	
 RAB14	
-RAB18	Warburg micro syndrome type 3
+RAB18	warburg micro syndrome type 3
 RAB1A	
 RAB2A	
 RAB5C	
-RAB7A	Charcot-Marie-Tooth (CMT) type 2 neuropathy
-RAB8A	Parkinson's disease
-RALA	Hiatt-Neu-Cooper Syndrome
-RHOA	Gastric cancer
-VIMP	Hashimoto's thyroiditis
+RAB7A	charcot-marie-tooth (CMT) type 2 neuropathy
+RAB8A	parkinson's disease
+RALA	hiatt-neu-cooper syndrome
+RHOA	gastric cancer
+VIMP	hashimoto's thyroiditis
 AATF	
 CCDC86	
-DDX10	Pediatric acute myeloid leukemia
+DDX10	pediatric acute myeloid leukemia
 EXOSC2	SHRF disease
-EXOSC3	Pontocerebellar hypoplasia
+EXOSC3	pontocerebellar hypoplasia
 EXOSC5	
 EXOSC8	
-LARP7	Alazami syndrome
+LARP7	alazami syndrome
 MEPCE	
 MPHOSPH10	
-MRPS2	Sensorineural hearing loss+hypoglycemia
-MRPS25	Leigh syndrome	
-MRPS27	Leigh Syndrome
-MRPS5	Kearns-Sayre syndrome
-NARS2	Alpers' syndrome
+MRPS2	sensorineural hearing loss+hypoglycemia
+MRPS25	leigh syndrome
+MRPS27	leigh syndrome
+MRPS5	kearns-sayre syndrome
+NARS2	alpers' syndrome
 NGDN	
 NOL10	
 SEPSECS	
 SRP19	
-SRP54	Severe congenital neutropenia 8
-SRP72	Familial bone marrow failure
-EIF4H	Williams syndrome
-FBLN5	Age-related macular degeneration type 3
-FBN1	Marfan syndrome
-FBN2	Congenital contractural arachnodactyly
+SRP54	severe congenital neutropenia 8
+SRP72	familial bone marrow failure
+EIF4H	williams syndrome
+FBLN5	age-related macular degeneration type 3
+FBN1	marfan syndrome
+FBN2	congenital contractural arachnodactyly
 MAT2B	
 NEK9	
-NUP214	Acute myeloid leukemia
+NUP214	acute myeloid leukemia
 NUP54	
 NUP62	
 NUP88	
 NUPL1	
-SPG20	Troyer syndrome
+SPG20	troyer syndrome
 AP2A2	
 AP2M1	
 GFER	
@@ -133,10 +133,10 @@ TBCD
 TBCE	
 TUBA4A	
 TUBB1	
-TUBB2A	Complex cortical dysplasia with other brain malformations-5
-TUBB2B	Asymmetric polymicrogyria
-TUBB4A	Hypomyelinating leukodystrophy-6
-TUBB4B	Leber congenital amaurosis
+TUBB2A	complex cortical dysplasia with other brain malformations-5
+TUBB2B	asymmetric polymicrogyria
+TUBB4A	hypomyelinating leukodystrophy-6
+TUBB4B	leber congenital amaurosis
 TUBB6	
 BCKDK	
 LARP4B	
@@ -149,13 +149,13 @@ UBAP2
 UBAP2L	
 AES	
 AKAP9	
-CDK5RAP2 Alzheimer's disease
+CDK5RAP2	alzheimer's disease
 CENPF	
-CEP135	Autosomal recessive primary microcephaly-8
+CEP135	autosomal recessive primary microcephaly-8
 CEP250	
 CEP350	
-CIT	Schizophrenia
-CNTRL	Stem cell myeloproliferative disorder
+CIT	schizophrenia
+CNTRL	stem cell myeloproliferative disorder
 ERC1	
 FGFR1OP	
 GCC1	

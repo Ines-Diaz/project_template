@@ -1,4 +1,4 @@
-library("igraph")
+library(STRINGdb)
 
 E <- read.table(file = 'data/E.tsv', sep = '\t', header = TRUE)
 M <- read.table(file = 'data/M.tsv', sep = '\t', header = TRUE)
@@ -27,11 +27,14 @@ orf10 <- read.table(file = 'data/orf10.tsv', sep = '\t', header = TRUE)
 
 proteins_relations <- rbind(E, rbind(M, rbind(N, rbind(S, rbind(nsp1, rbind(nsp2, rbind(nsp3, rbind(nsp4, rbind(nsp5, rbind(nsp6, rbind(nsp7, rbind(nsp8, rbind(nsp9, rbind(nsp10, rbind(nsp11, rbind(nsp12, rbind(nsp13, rbind(orf3a, rbind(orf3b, rbind(orf6, rbind(orf8, rbind(orf9b, rbind(orf9c, orf10)))))))))))))))))))))))
 
-prot_rel_mat <- as.matrix(proteins_relations[,1:2])
+# New STRING_db object
+string_db <- STRINGdb$new(version="11",
+                          species=9606,
+                          score_threshold=995,
+                          input_directory="")
 
-g <- graph.edgelist(prot_rel_mat, directed = FALSE)
+# Map to STRING
+proteins_mapped = string_db$map(proteins_relations, "node1", removeUnmappedRows = TRUE)
 
-V(g) # Nodos de la red (vertices)
-E(g) # Conexiones de la red (Edges)
-
-plot(g)
+# Plot the STRING network 
+string_db$plot_network(proteins_mapped$STRING_id)

@@ -38,3 +38,18 @@ proteins_mapped = string_db$map(proteins_relations, "node1", removeUnmappedRows 
 
 # Plot the STRING network 
 string_db$plot_network(proteins_mapped$STRING_id)
+
+
+nodes_diseases <- read.table(file = 'data/nodes&diseases.tsv', fill=TRUE, header=TRUE, quote="", sep="\t", encoding="UTF-8")
+subset_nodes_diseases <- subset(nodes_diseases, disease!="")
+
+subset_mat <- as.matrix(subset_nodes_diseases[,1:2])
+
+g <- graph.edgelist(subset_mat, directed = FALSE)
+
+plot(g)
+
+# proteins_diseases_mapped = string_db$map(subset_nodes_diseases, "node", removeUnmappedRows = TRUE)
+
+# Plot the STRING network 
+# string_db$plot_network(proteins_diseases_mapped$STRING_id)

@@ -1,4 +1,5 @@
 library(STRINGdb)
+library(igraph)
 
 E <- read.table(file = 'data/E.tsv', sep = '\t', header = TRUE)
 M <- read.table(file = 'data/M.tsv', sep = '\t', header = TRUE)
@@ -45,7 +46,7 @@ subset_nodes_diseases <- subset(nodes_diseases, disease!="")
 
 subset_mat <- as.matrix(subset_nodes_diseases[,1:2])
 
-g <- graph.edgelist(subset_mat, directed = FALSE)
+g <- graph_from_edgelist(subset_mat, directed = FALSE)
 
 plot(g)
 

@@ -1,4 +1,6 @@
 library(STRINGdb)
+library(igraph)
+library(linkcomm)
 
 E <- read.table(file = 'data/E.tsv', sep = '\t', header = TRUE)
 M <- read.table(file = 'data/M.tsv', sep = '\t', header = TRUE)
@@ -37,19 +39,39 @@ string_db <- STRINGdb$new(version="11",
 proteins_mapped = string_db$map(proteins_relations, "node1", removeUnmappedRows = TRUE)
 
 # Plot the STRING network 
+png(file = "../results/figuraSTRINGdb.png")
+
 string_db$plot_network(proteins_mapped$STRING_id)
 
+dev.off()
 
 nodes_diseases <- read.table(file = 'data/nodes&diseases.tsv', fill=TRUE, header=TRUE, quote="", sep="\t", encoding="UTF-8")
 subset_nodes_diseases <- subset(nodes_diseases, disease!="")
 
 subset_mat <- as.matrix(subset_nodes_diseases[,1:2])
 
-g <- graph.edgelist(subset_mat, directed = FALSE)
+png(file = "../results/figuraiGraph.png")
 
-plot(g)
+plot(graph.edgelist(subset_mat, directed = FALSE))
 
-# proteins_diseases_mapped = string_db$map(subset_nodes_diseases, "node", removeUnmappedRows = TRUE)
 
-# Plot the STRING network 
-# string_db$plot_network(proteins_diseases_mapped$STRING_id)
+dev.off()
+
+
+#### Link Communities ######
+
+ppi = graph_from_data_frame(human_pp,directed = F)
+subset_nodes_diseases_graph = graph_from_data_frame(subset_nodes_diseases,directed = F)
+
+png(file = "../results/figuraLinkcomm.png")
+
+plot(subset_nodes_diseases_graph,
+     vertex.color = "tomato",
+     vertex.size = degree(ppi)/5,
+     vertex.label.color = "black",
+     vertex.label.family = "Helvetica",
+     vertex.label.cex = 0.6,
+     layout = layout.kamada.kawai
+)
+
+dev.off()

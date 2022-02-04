@@ -35,7 +35,7 @@
 			%% INTRODUCIR TITULO PROYECTO               %%
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			
-			\title{A sample article title}
+			\title{Comorbilidades COVID-19}
 			
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%% AUTORES. METER UNA ENTRADA AUTHOR        %%
@@ -74,18 +74,16 @@
 			\begin{abstract} 
 			
 
-			Debido a la nueva normalidad provocada por la COVID-19 durante estos últimos dos años, los estudios relacionados con esta enfermedad han traído información esclarecedora 			en cuanto a su funcionamiento.En este caso, deseamos ver las morbilidades que se asocian con la Covid-19. Esto ayudará a identificar qué otros trastornos y patologías 				favorecerían su desarrollo o debilitarían al individuo frente a un posible contagio.
+			Debido a la nueva normalidad provocada por la COVID-19 durante estos últimos dos años, los estudios relacionados con esta enfermedad han traído información esclarecedora en cuanto a su funcionamiento. En este caso, deseamos ver las morbilidades que se asocian con la Covid-19. Esto ayudará a identificar qué otros trastornos y patologías favorecerían su desarrollo o debilitarían al individuo frente a un posible contagio.
 
 			\newline
 
-			Se ha recolectado información sobre la red PPI de la COVID-19 y obtenido todas las proteínas relevantes. A partir de varias búsquedas en  \textit{PheGenI} , se consigue más 			información sobre las otras patologías a las que estas mismas proteínas están asociadas y se obtienen para componer los diferentes nodos de la red de comorbilidades que se 			generarán luego. Se realiza un preprocesamiento previo pues, aunque las proteínas están relacionadas con el organismo humano, no todas  tienen una enfermedad relevante 			asociada. Con esto, se reduce el tamaño de la red y la se mantiene coherente.
+			Se ha recolectado información sobre la red PPI de la COVID-19 y obtenido todas las proteínas relevantes. A partir de varias búsquedas en \textit{PheGenI}, se consigue más información sobre las otras patologías a las que estas mismas proteínas están asociadas y se obtienen para componer los diferentes nodos de la red de comorbilidades que se generarán luego. Se realiza un preprocesamiento previo pues, aunque las proteínas están relacionadas con el organismo humano, no todas  tienen una enfermedad relevante asociada. Con esto, se reduce el tamaño de la red y la se mantiene coherente.
 
 			\newline
 
-			Diseñando programas en \textit{R}, se ejecuta el código necesario para construir los modelos de redes y analizar las comorbilidades de COVID-19. Se observa que hay algunas 			patologías que interaccionan más fuertemente e indican mayor susceptibilidad a contraer la enfermedad, tales como INSERTAR_PATOLOGÍA_AQUÍ y 								INSERTAR_PATOLOGÍA_AQUÍ.
+			Diseñando programas en \textit{R}, se ejecuta el código necesario para construir los modelos de redes y analizar las comorbilidades de COVID-19. Se observa que hay algunas patologías que interaccionan más fuertemente e indican mayor susceptibilidad a contraer la enfermedad, tales como el cáncer, la enfermedad de Parkinson o el Alzheimer.
 
-			HACE_FALTA_MENCIONAR_ALGO_DE_CONCLUSIÓN_Y_LISTO_:)
-			
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			%% RESUMEN BREVE DE NO MAS DE 100 PALABRAS   %%
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -97,119 +95,20 @@
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			
 			\begin{keyword}
-			\kwd{sample}
-			\kwd{article}
-			\kwd{author}
+			\kwd{comorbilidades}
+			\kwd{COVID-19}
+			\kwd{proteínas}
+			\kwd{genes}
+			\kwd{enfermedades}
+			\kwd{redes}
+			\kwd{interacciones}
 			\end{keyword}
 		
 		
 		\end{abstractbox}
 	
-	\end{frontmatter}
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%% EJEMPLO DE LATEX %%                                                                %%
-	%% BORRAR ANTES DE ENTREGAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!              %%
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	\section*{Content}
-		Text and results for this section, as per the individual journal's instructions for authors. Here, we reference the figure \ref{fig:cost_genome} and figure \ref{fig:cost_megabase} but also the table \ref{tab:ejemplo}.
-	
-	\section*{Section title}
-		Text for this section\ldots
-
-		In this section we examine the growth rate of the mean of $Z_0$, $Z_1$ and $Z_2$. In
-		addition, we examine a common modeling assumption and note the
-		importance of considering the tails of the extinction time $T_x$ in
-		studies of escape dynamics.
-		We will first consider the expected resistant population at $vT_x$ for
-		some $v>0$, (and temporarily assume $\alpha=0$)
-		%
-		\[
-		E \bigl[Z_1(vT_x) \bigr]=
-		\int_0^{v\wedge
-			1}Z_0(uT_x)
-		\exp (\lambda_1)\,du .
-		\]
-		%
-		If we assume that sensitive cells follow a deterministic decay
-		$Z_0(t)=xe^{\lambda_0 t}$ and approximate their extinction time as
-		$T_x\approx-\frac{1}{\lambda_0}\log x$, then we can heuristically
-		estimate the expected value as
-		%
-		\begin{equation}\label{eqexpmuts}
-			\begin{aligned}[b]
-				&      E\bigl[Z_1(vT_x)\bigr]\\
-				&\quad      = \frac{\mu}{r}\log x
-				\int_0^{v\wedge1}x^{1-u}x^{({\lambda_1}/{r})(v-u)}\,du .
-			\end{aligned}
-		\end{equation}
-		%
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		%% USAR \cite{...} PARA INCLUIR REFERENCIAS BIBLIOGRAFICAS          %%
-		%%  \cite{koon}  Para una sola                                      %%
-		%%  \cite{oreg,khar,zvai,xjon,schn,pond} Para una lista             %%
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		Thus we observe that this expected value is finite for all $v>0$ (also see \cite{koon,xjon,marg,schn,koha,issnic}).
+	\end{frontmatter}		
 		
-		
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		%% FIGURAS                                                                               %%
-		%% includegraphics: inserta la imagen                                                    %%
-		%% caption: descripcion de la figura                                                     %%
-		%% label: etiqueta para hacer referencia a la figura en el texto con la instrucción ref  %%
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-		
-		\begin{figure}[h!]
-			\includegraphics[width=0.9\textwidth]{figures/Sequencing_Cost_per_Genome_May2020.jpg}
-			\caption{Sample figure title}
-			\label{fig:cost_genome}
-		\end{figure}
-		
-		\begin{figure}[h!]
-			\includegraphics[width=0.9\textwidth]{figures/Sequencing_Cost_per_Megabase_May2020.jpg}
-			\caption{Sample figure title}
-			\label{fig:cost_megabase}
-		\end{figure}
-		
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		%% TABLAS                                                                               %%
-		%% caption: Descripción tabla                                                           %%
-		%% \begin{tabular}{letras}: Indica numero de columnas.                                  %%
-		%%    Una letra por columna, la letra indica la alineación de la columna:               %%
-		%%    c center, l left, r right                                                         %%
-		%% hline: Representa una linea como entre filas                                         %%
-		%% \\: fin de fila                                                                      %%
-		%% &: delimitador de celda                                                              %%
-		%% label: etiqueta para hacer referencia a la tabla en el texto con la instrucción ref  %%
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		
-		\begin{table}[h!]
-			\caption{Sample table title. This is where the description of the table should go}
-			\begin{tabular}{cccc}
-				\hline
-				& B1  &B2   & B3\\ 
-				\hline
-				A1 & 0.1 & 0.2 & 0.3\\
-				A2 & ... & ..  & .\\
-				A3 & ..  & .   & .\\ 
-				\hline
-				\label{tab:ejemplo}
-			\end{tabular}
-		\end{table}
-				
-		\subsection*{Sub-heading for section}
-			Text for this sub-heading\ldots
-	
-			\subsubsection*{Sub-sub heading for section}
-				Text for this sub-sub-heading\ldots
-					
-					\paragraph*{Sub-sub-sub heading for section}
-						Text for this sub-sub-sub-heading\ldots
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%% FIN DE EJEMPLO !!!!!!!!!!!! %%
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% COMIENZO DEL DOCUMENTO REAL %%
@@ -229,15 +128,20 @@
 	\begin{backmatter}
 	
 		\section*{Abreviaciones}%% if any
-			Indicar lista de abreviaciones mostrando cada acrónimo a que corresponde
+			
+			PPI: Protein-Protein Interactions
 		
 		\section*{Disponibilidad de datos y materiales}%% if any
-			Debéis indicar aquí un enlace a vuestro repositorio de github.
+			
+			\href{https://github.com/Ines-Diaz/project_template}{\textcolor{Cyan}{\underline{Repositorio GitHub}}}
 		
 		\section*{Contribución de los autores}
-			Usando las iniciales que habéis definido al comienzo del documento, debeis indicar la contribución al proyecto en el estilo:
-			J.E : Encargado del análisis de coexpresión con R, escritura de resultados; J.R.S : modelado de red con python y automatizado del código, escritura de métodos; ...
-			OJO: que sea realista con los registros que hay en vuestros repositorios de github. 
+			
+			 I.D.R.:
+			 \newline
+			 M.L.P.R.:
+			 \newline
+			 C.V.R.:
 		
 		
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

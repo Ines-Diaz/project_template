@@ -1,1 +1,33 @@
 \section{Materiales y métodos}
+
+\subsection{Obtención de proteínas y genes asociados}
+
+El primer paso fue obtener las proteínas virales del SARS-CoV2, para ello se recurrió a \textit{STRING}, una base de datos de interacciones proteína-proteína. Concretamente, se accedió a una \href{https://string-db.org/cgi/covid.pl}{\textcolor{Cyan}{\underline{página de STRING}}} donde se recopilan las proteínas asociadas al virus y sus interacciones. A partir de ella, se fue seleccionando cada proteína viral con el fin de observar cuáles eran los genes que estaban asociados a cada una y guardarlos en archivos \textit{.tsv}. Las proteínas que se asociaron al SARS-CoV2 son \textit{E, M, N, Spike, nsp1, nsp2, nsp3, nsp4, nsp5, nsp6, nsp7, nsp8, nsp9, nsp10, nsp11, nsp12, nsp13, nsp14, nsp15, orf3a, orf3b, orf6, orf7a, orf8, orf9b, orf9c, orf10}. En los ficheros de formato \textit{TSV}, se almacenan las interacciones entre los genes de cada proteína con separaciones de tabulares entre cada columna. En las columnas, se asocian los nombres \textit{node1} y \textit{node2} para los genes que interaccionan y, el resto se denominan \textit{node1 accession}, \textit{node2 accession}, \textit{node1 annotation}, \textit{node2 annotation} y \textit{score}. 
+
+\newline
+
+Una vez recopilados los ficheros de formato \textit{TSV}, se guardaron en el proyecto para, posteriormente, poder ser utilizados en el desarrollo del código en \textit{R}. Se comentará en más detalle en la sección \textit{Generación de análisis de red PPI}.
+
+\subsection{Búsqueda de enfermedades relacionadas}
+
+Una vez recopiladas las interacciones de los genes asociados a las proteínas, se extrajeron el nombre de aquellos genes involucrados en dichas interacciones. El total de estos genes fue de 246, por lo que se tuvo que realizar una búsqueda de todos ellos con el fin de recopilar información a cerca de posibles enfermedades que pudieran estar relacionadas con los seres humanos. Dicha búsqueda se hizo por medio del integrador \href{https://www.ncbi.nlm.nih.gov/gap/phegeni}{\textcolor{Cyan}{\underline{Phenotype-Genotype Integrator (PheGenI)}}, el cual se fusiona con varias bases de datos alojadas en el Centro Nacional de Biotecnología Información (NCBI). 
+	
+\newline
+	
+Finalmente, se obtuvieron enfermedades relacionadas para 75 genes. Para los 171 genes restantes no se encontró ninguna enfermedad asociada a ellos. Entre las enfermedades encontramos gran diversidad como diferentes tipos de cáncer, síndromes, Parkinson, Alzheimer, entre otras. Se comentará en más detalle en la sección \textit{Resultados}.
+
+\subsection{Generación de análisis de red PPI}
+
+En esta sección, se comentará el desarrollo realizado en el lenguaje R. Las librerías que se usaron son \textit{STRINGdb}, \textit{igraph} y \textit{linkcomm}. El paquete \textit{STRINGdb} proporciona una interfaz R para la base de datos de interacciones proteína-proteína \href{http://www.string-db.org}{\textcolor{Cyan}{\underline{STRING}}. El paquete \textit{igraph} recopila una colección de herramientas de análisis de redes con énfasis en la portabilidad, eficiencia y facilidad de uso del código. El paquete \textit{linkcomm} proporciona herramientas para generar, visualizar y analizar \textit{Link Communities} en redes. Tanto el paquete \textit{igraph} como el paquete \textit{linkcomm} se encuentran en \textit{CRAN}, en cambio, el paquete \textit{STRINGdb} se debe instalar por medio de \textit{BioConductor}.
+	
+\newline
+	
+Tras llamar a las librerías necesarias, se cargaron todos los archivos \textit{.tsv} descargados de \textit{STRING} que recopilan las interacciones de los genes para cada proteína viral. Y a su vez, se agregaron todas las variables en las que se cargaron estos archivos en una única variable. A partir de ella, gracias al paquete \textit{STRINGdb}, se creó un nuevo objeto \textit{STRING\_db} asociado a la especie \textit{Homo Sapiens}, para poder observar las interacciones de los genes recopilados para el ser humano. Se realizó un mapeo de los genes y se generó la red de interacción de los genes de las proteínas. 
+
+\newline
+
+El siguiente paso fue guardar la recopilación de genes y enfermedades en una nueva variable, con el fin de poder observar la relación entre ellos. Para poder obtener resultados más óptimos, únicamente se consideraron aquellos genes que tuvieran enfermedades asociadas. Primero, se intentó representar una red con los genes y enfermedades por medio del paquete \textit{igraph}, al observar que no era el mejor método debido a la representación que se obtuvo, se decidió realizarla por medio del paquete \textit{linkcomm}. De este modo, se podría mostrar las comunidades existentes en la red de los genes y enfermedades asociadas.
+
+\newline
+
+Para una mejor visualización de lo comentado en esta parte, se detallará en la sección \textit{Resultados}.

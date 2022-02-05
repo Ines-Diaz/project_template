@@ -27,7 +27,7 @@ La red mostrada a continuación muestra un esquema de colores que identifican aq
 Se procede a descargar la información casi completa de toda la red (246 de las 332 proteínas) en forma de archivos \textit{tsv} para su posterior lectura y graficación usando código en \textit{R}. Se observa que, del total, tan sólo \emph{existen interacciones significativas entre 67 proteínas cuando originalmente se esperaban 4 interacciones} a nivel global de la red. El elevado número de interacciones nos indica que esta red no es fruto del azar(como prueba el \textit{p} valor de 0), si no que se trata de un red real e indicativo de que las proteínas probablemente están asociadas a funciones biológicas.
 
 	\begin{figure}[h!]
-		\includegraphics[width=0.9\textwidth]{../results/figuraSTRINGdb.png}
+		\includegraphics[width=0.9\textwidth]{figures/figuraSTRINGdb.png}
 		\caption{Full protein interaction map}
 		\label{fig:ppi_stringdb}
 	\end{figure}
@@ -39,7 +39,7 @@ Ahora se tiene la absoluta certeza de que estas proteínas pueden estar asociada
 Usando los datos recopilados en el archivo \textit{nodes&diseases.tsv} en el que se encuentran asociadas las proteínas y sus posibles enfermedades derivadas, se puede visualizar el subconjunto de aquellas que filas que contenga una proteína y su enfermedad (se desechan aquellas con las que no se tenga información de su patología correspondiente). La red resultante de \textit{iGraph} de 75 nodos queda de la siguiente forma:
 
 	\begin{figure}[h!]
-		\includegraphics[width=0.9\textwidth]{../results/figuraiGraph.png}
+		\includegraphics[width=0.9\textwidth]{figures/figuraiGraph.png}
 		\caption{Partial protein-disease network (iGraph)}
 		\label{fig:ppi_sigraph}
 	\end{figure}
@@ -47,7 +47,7 @@ Usando los datos recopilados en el archivo \textit{nodes&diseases.tsv} en el que
 Aunque algo desordenada, se puede apreciar que hay enfermedades que hay nodos de tipo \textit{proteína} y nodos del tipo \textit{enfermedad} (sin diferencias visuales aparentes). Aquellos nodos que se encuentren más cercanos entre sí guardan una relación y viceversa. Se decide probar una nueva y mejor representación usando el paquete \texit{R} de \texit{linkcomm}. Se encuentran nodos más grandes que otros, indicativo de un grado superior y su mayor nivel de conectividad. Estos nodos coinciden con proteínas, con lo que se deduce que \emph{una importante minoría de proteínas están relacionadas con más de una patología} u otra proteína con su patología correspondiente. Podemos destacar \texit{COL6A1,  ACLADM y la PMCA }, aunque también se ve una enfermedad que está asociada a varias proteínas.
 
 	\begin{figure}[h!]
-		\includegraphics[width=0.9\textwidth]{../results/figuraLinkcomm.png}
+		\includegraphics[width=0.9\textwidth]{figures/figuraLinkcomm.png}
 		\caption{Partial protein-disease network (linkcomm)}
 		\label{fig:ppi_linkcomm}
 	\end{figure}
